@@ -11,5 +11,5 @@ for i in dataSet:
         cnt += 1
         group = 0
 
-print(dataSet)
+print(cnt)
 
