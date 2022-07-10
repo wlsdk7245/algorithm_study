@@ -30,3 +30,18 @@
 - **6주차** : 기출풀이(계획 미정)
 - **7주차** : 기출풀이(계획 미정)
 - **8주차** : 기출풀이(계획 미정)
+
+## Fork한 브랜치의 최신 버전 받기
+
+#### 📍 각자 폴더를 사용하기 때문에 코드가 꼬일 일은 잘 없겠지만 여러 명이 공유하는 레포이기 때문에 항상 최신 버전으로 유지하는 것을 권장합니다!!!
+
+본인 레포지토리 main 브랜치에서 작업함
+
+```
+git remote add upstream https://github.com/dlwnsgus07/algorithm_study.git
+git remote -v
+# 현재 로컬의 리모트 공간 확인 (origin, upstream 로컬과 서버 총 4개 확인)
+
+git fetch upstream main
+git rebase upstream/main
+```
