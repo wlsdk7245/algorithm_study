@@ -10,6 +10,7 @@ reviewers:
   - kji990607
   - wlsdk7245
   - oxhwixo
+  - Sihyun20
 
 # A list of keywords to be skipped the process that add reviewers if pull requests include it
 skipKeywords:
