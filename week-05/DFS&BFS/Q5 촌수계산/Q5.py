@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(300000)
+
 n = int(input())
 a, b = map(int, input().split())
 m = int(input())
@@ -11,13 +14,10 @@ for _ in range(m):
     arr[y].append(x)
 
 def search(v):
-    for i in arr[x]:
+    for i in arr[v]:
         if visited[i] == 0:
             visited[i] = visited[v] + 1
-            search(v)
-
-            if i == b:
-                break
+            search(i)
 
 search(a)
 
@@ -25,24 +25,3 @@ if visited[b] > 0:
     print(visited[b])
 else:
     print(-1)
-
-# def search(graph, v, visited):
-#     global count, index, isFind
-#
-#     if v == b:
-#         count = index
-#         isFind = True
-#
-#     index += 1
-#     visited[v] = True
-#
-#     for i in graph[v]:
-#         if not visited[i]:
-#             search(graph, i, visited)
-#
-# search(arr, a, visited)
-#
-# if isFind == True:
-#     print(count)
-# else:
-#     print(-1)
