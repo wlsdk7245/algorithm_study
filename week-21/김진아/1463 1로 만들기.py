@@ -1,5 +1,5 @@
 n = int(input())
-arr = [0] * (n + 1)
+arr = [0] * (1000000 + 1)
 arr[1], arr[2], arr[3] = 0, 1, 1
 
 for i in range(4, n + 1):
