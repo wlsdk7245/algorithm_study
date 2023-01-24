@@ -7,7 +7,7 @@ def search(num, count):
     if num == b:
         result = count
         return
-    elif num >= b:
+    elif num > b:
         return
     search(num * 2, count + 1)
     search(num * 10 + 1, count + 1)
