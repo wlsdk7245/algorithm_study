@@ -1,12 +1,10 @@
 a, b = map(int, input().split())
 
-check = False
-result = 0
+result = -1
 
 def search(num, count):
-    global check, result
+    global result
     if num == b:
-        check = True
         result = count
         return
     elif num >= b:
@@ -16,7 +14,4 @@ def search(num, count):
 
 search(a, 1)
 
-if check:
-    print(result)
-else:
-    print(-1)
+print(result)
