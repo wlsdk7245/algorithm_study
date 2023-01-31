@@ -1,5 +1,4 @@
 from collections import deque
-
 n, m, t = map(int, input().split())
 princess = [list(map(int, input().split())) for _ in range(n)]
 
@@ -10,13 +9,12 @@ q.append((0, 0, 0))
 
 visited = [[False] * m for _ in range(n)]
 
-visited[0][0] = 0
+visited[0][0] = True
 result = 1e9
 
 while q:
     x, y, d = q.popleft()
 
-    # 공주님 위치에 도착
     if x == n - 1 and y == m - 1:
         result = min(result, d)
         break
@@ -40,7 +38,6 @@ while q:
                 visited[nx][ny] = True
                 if temp <= t:
                     result = temp
-
 
 if result > t:
     print('Fail')
